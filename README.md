@@ -8,6 +8,15 @@ El objetivo es implementar una API REST utilizando **Flask**, persistencia de da
 
 El proyecto también incluye un cliente de consola desarrollado en Python que permite interactuar con los distintos endpoints de la API.
 
+## Sitio del proyecto
+
+La página de presentación del proyecto se encuentra publicada mediante GitHub Pages:
+
+[Ver sitio del proyecto](https://maricroma.github.io/Gestion-Tareas-Flask-SQLite/)
+
+> **Nota:** GitHub Pages aloja la página de presentación y documentación del proyecto.  
+> La API desarrollada con Flask y la base de datos SQLite se ejecutan localmente siguiendo las instrucciones de este README.
+
 ## Tecnologías utilizadas
 
 - Python
