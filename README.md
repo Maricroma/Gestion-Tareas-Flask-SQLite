@@ -51,7 +51,7 @@ El sistema permite:
 ### 1. Clonar el repositorio
 
 ```bash
-git clone URL_DEL_REPOSITORIO
+git clone https://github.com/Maricroma/Gestion-Tareas-Flask-SQLite.git
 ```
 
 Ingresar a la carpeta del proyecto:
