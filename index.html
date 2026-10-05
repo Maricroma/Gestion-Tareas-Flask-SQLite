@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PFO 2 - Sistema de Gestión de Tareas</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f6f8;
+            color: #333;
+        }
+
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin-bottom: 10px;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 20px;
+        }
+
+        section {
+            background-color: white;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+
+        h2 {
+            color: #2c3e50;
+        }
+
+        .tecnologias span {
+            display: inline-block;
+            background-color: #e8eef3;
+            padding: 8px 12px;
+            margin: 4px;
+            border-radius: 5px;
+        }
+
+        .endpoint {
+            background-color: #f4f6f8;
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 5px;
+        }
+
+        .boton {
+            display: inline-block;
+            background-color: #2c3e50;
+            color: white;
+            padding: 12px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .boton:hover {
+            background-color: #1a252f;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #2c3e50;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Sistema de Gestión de Tareas</h1>
+    <p>PFO 2 - API REST con Flask y SQLite</p>
+</header>
+
+<main>
+
+    <section>
+        <h2>Descripción</h2>
+
+        <p>
+            Proyecto desarrollado como parte del PFO 2 para la cátedra de Programación sobre Redes de la Tecnicatura Superior en Desarrollo de Software del IFTS-29.
+        </p>
+
+        <p>
+            Consiste en una API REST desarrollada con Flask que permite
+            registrar usuarios, iniciar sesión y acceder a una ruta protegida.
+        </p>
+
+        <p>
+            Los datos se almacenan utilizando SQLite y las contraseñas
+            se protegen mediante hashing.
+        </p>
+    </section>
+
+
+    <section>
+        <h2>Tecnologías utilizadas</h2>
+
+        <div class="tecnologias">
+            <span>Python</span>
+            <span>Flask</span>
+            <span>SQLite</span>
+            <span>Werkzeug</span>
+            <span>Requests</span>
+            <span>python-dotenv</span>
+        </div>
+    </section>
+
+
+    <section>
+        <h2>Endpoints de la API</h2>
+
+        <div class="endpoint">
+            <strong>POST /registro</strong>
+            <p>Registra un nuevo usuario almacenando su contraseña de forma segura.</p>
+        </div>
+
+        <div class="endpoint">
+            <strong>POST /login</strong>
+            <p>Verifica las credenciales e inicia una sesión.</p>
+        </div>
+
+        <div class="endpoint">
+            <strong>GET /tareas</strong>
+            <p>Ruta protegida que muestra un HTML de bienvenida.</p>
+        </div>
+
+        <div class="endpoint">
+            <strong>POST /logout</strong>
+            <p>Finaliza la sesión actual.</p>
+        </div>
+    </section>
+
+
+    <section>
+        <h2>Características</h2>
+
+        <ul>
+            <li>API REST desarrollada con Flask.</li>
+            <li>Persistencia mediante SQLite.</li>
+            <li>Contraseñas almacenadas mediante hashing.</li>
+            <li>Autenticación mediante sesiones.</li>
+            <li>Variables sensibles almacenadas en un archivo .env.</li>
+            <li>Ruta protegida para usuarios autenticados.</li>
+            <li>Cliente de consola desarrollado en Python.</li>
+        </ul>
+    </section>
+
+
+    <section>
+        <h2>Código fuente</h2>
+
+        <p>
+            El código fuente, las instrucciones de instalación y las
+            pruebas realizadas se encuentran disponibles en GitHub.
+        </p>
+
+        <a class="boton"
+           href="https://github.com/Maricroma/Gestion-Tareas-Flask-SQLite.git"
+           target="_blank">
+            Ver repositorio en GitHub
+        </a>
+    </section>
+
+</main>
+
+
+<footer>
+    <p>PFO 2 - Sistema de Gestión de Tareas</p>
+</footer>
+
+</body>
+</html>
