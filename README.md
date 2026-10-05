@@ -262,4 +262,52 @@ El servidor rechaza correctamente la solicitud con el código de estado `401 Una
 
 ![Acceso denegado después del logout](capturas/05_acceso_denegado.png)
 
+# Respuestas conceptuales
+
+## ¿Por qué hashear contraseñas?
+
+Las contraseñas no deben almacenarse en texto plano, ya que si una persona
+obtuviera acceso no autorizado a la base de datos podría conocer directamente
+las credenciales de los usuarios.
+
+El hashing permite transformar una contraseña en un valor derivado que se
+almacena en la base de datos en lugar de guardar la contraseña original.
+Esta transformación está diseñada para no necesitar recuperar la contraseña
+original para realizar la autenticación.
+
+En este proyecto se utiliza `generate_password_hash()` de Werkzeug para
+generar el hash antes de almacenar la contraseña en SQLite.
+
+Durante el inicio de sesión se utiliza `check_password_hash()` para comprobar
+si la contraseña ingresada corresponde al hash almacenado.
+
+De esta manera, la base de datos nunca necesita almacenar las contraseñas
+originales de los usuarios, reduciendo el impacto que tendría una eventual
+exposición de la información almacenada.
+
+
+## ¿Qué ventajas tiene utilizar SQLite en este proyecto?
+
+SQLite resulta adecuado para este proyecto porque proporciona una base de datos
+relacional simple y liviana que no requiere instalar ni configurar un servidor
+de base de datos independiente.
+
+Entre sus principales ventajas para este proyecto se encuentran:
+
+- **Fácil configuración:** Python incluye soporte para SQLite mediante el módulo
+  `sqlite3`.
+- **Persistencia:** los usuarios permanecen almacenados aunque el servidor Flask
+  se detenga y vuelva a iniciarse.
+- **Portabilidad:** toda la base de datos se almacena localmente en un único
+  archivo.
+- **Bajo consumo de recursos:** no requiere ejecutar un servicio de base de datos
+  adicional.
+- **Soporte SQL:** permite utilizar tablas, restricciones y consultas SQL.
+- **Adecuado para proyectos pequeños:** es una solución práctica para aplicaciones
+  educativas, prototipos y sistemas que no necesitan una infraestructura de base
+  de datos compleja.
+
+En este proyecto, SQLite permite almacenar los usuarios registrados y sus
+contraseñas hasheadas de manera persistente mediante el archivo `tareas.db`.
+
 Trabajo realizado para **PFO 2 - Sistema de Gestión de Tareas con API y Base de Datos**.
